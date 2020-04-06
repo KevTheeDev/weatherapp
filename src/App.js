@@ -27,6 +27,7 @@ class App extends React.Component {
 
 async Day () {
   const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
+  this.setState({ city: weatherDay.data})
 }
 
   render() { 
@@ -38,7 +39,6 @@ async Day () {
             <li>
               {/* describes what thelink looks likes */}
               <Link to="/">Day</Link>
-              <p> { this.state.data.city} </p>
               <p> { this.state.city} </p>
             </li>
           </ul>
