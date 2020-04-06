@@ -39,6 +39,7 @@ async Day () {
               {/* describes what thelink looks likes */}
               <Link to="/">Day</Link>
               <p> { this.state.data.city} </p>
+              <p> { this.state.city} </p>
             </li>
           </ul>
 
