@@ -15,12 +15,12 @@ class App extends Component {
         <div>
           <ul>
             <li>
-              <Link to="/name-of-day">Day</Link>
+              <Link to="">Day</Link>
             </li>
           </ul>
 
           <Switch>
-            <Route path="/name-of-day">
+            <Route path="/">
               
             </Route>
           </Switch>
@@ -29,6 +29,10 @@ class App extends Component {
       </Router>
     );
   }
+}
+
+function Day(){
+  return <h2>Day of the Week Temp</h2>
 }
  
 export default App;
