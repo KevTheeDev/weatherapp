@@ -15,7 +15,7 @@ class App extends Component {
         <div>
           <ul>
             <li>
-              
+              <Link to="/"></Link>
             </li>
           </ul>
         </div>
