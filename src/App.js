@@ -64,7 +64,7 @@ function Day(){
   
   return ( 
     <div>
-      <h2>Day of the Week Temp</h2>
+      <h2>Day of the Week Temp {this.state.data.map}</h2>
 
     </div>
   )
