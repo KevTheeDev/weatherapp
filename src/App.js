@@ -18,6 +18,12 @@ class App extends Component {
               <Link to="/"></Link>
             </li>
           </ul>
+
+          <Switch>
+            <Route>
+              
+            </Route>
+          </Switch>
         </div>
 
       </Router>
