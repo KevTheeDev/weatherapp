@@ -15,6 +15,11 @@ class App extends React.Component {
       day1weather: null,
       hourWeather: null,
 
+      day1img: '',
+      day2img: '',
+      day3img: '',
+      day4img: '',
+      day5img: '',
      }
   }
 
