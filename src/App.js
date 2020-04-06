@@ -9,9 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = { 
 
-      city: 'cty',
+      city: null,
       date: null,
-      data: null,
       day1weather: null,
       hourWeather: null,
 
