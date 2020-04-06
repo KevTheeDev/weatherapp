@@ -15,13 +15,13 @@ class App extends Component {
         <div>
           <ul>
             <li>
-              <Link to="">Day</Link>
+              <Link to="/">Day</Link>
             </li>
           </ul>
 
           <Switch>
             <Route path="/">
-              
+              <Day />
             </Route>
           </Switch>
         </div>
