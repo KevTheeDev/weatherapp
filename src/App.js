@@ -15,12 +15,12 @@ class App extends Component {
         <div>
           <ul>
             <li>
-              <Link to="/"></Link>
+              <Link to="/name-of-day">Day</Link>
             </li>
           </ul>
 
           <Switch>
-            <Route>
+            <Route path="/name-of-day">
               
             </Route>
           </Switch>
