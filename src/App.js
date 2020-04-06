@@ -1,27 +1,49 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
+import axios from 'axios';
 
 import './App.css';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { 
+
+      city: 'cty',
+      date: null,
+      data: null,
+      day1weather: null,
+      hourWeather: null,
+
+     }
   }
+
+
+
+async Day () {
+  const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
+}
+
   render() { 
     return ( 
       <Router>
 
-        <div>
+        <div className="weatherbox">
           <ul>
             <li>
+              {/* describes what thelink looks likes */}
               <Link to="/">Day</Link>
+              <p> { this.state.data} </p>
             </li>
           </ul>
 
+            {/* switch */}
+            {/* "path" mathces the "to" in the link */}
+            {/* route mathces to the component you have */}
           <Switch>
             <Route path="/">
               {/* returns day functions */}
+
               <Day />
             </Route>
           </Switch>
