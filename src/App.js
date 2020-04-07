@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import './App.css';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -27,3 +27,13 @@ class App extends React.Component {
     const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
     this.setState({ city: weatherDay.data})
   }
+
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
+}
+
