@@ -37,10 +37,11 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="weatherbox">
-        <p id="render-weatherbox" >
+
+        <p id="render-weatherbox" onClick={this.props.getWeather}>
           {/* .this refers to the getWeather */}
           {/* prop={value} */}
-          getWeather={this.getWeather}
+          
           15deg</p>
         <p id="render-weatherbox">80deg</p>
         <p id="render-weatherbox">30deg</p>
