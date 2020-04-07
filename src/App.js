@@ -30,6 +30,8 @@ export default class App extends React.Component {
 
     //.json converts the weadtherdatakey to readable text
     const data = await gotAPI.json()
+    
+    //hopefully something comes back from the pai
     console.log( data )
   }
 
@@ -38,11 +40,10 @@ export default class App extends React.Component {
     return (
       <div className="weatherbox">
 
-        <p id="render-weatherbox" onClick={this.props.getWeather}>
+        <p id="render-weatherbox" onClick={this.getWeather}>
           {/* .this refers to the getWeather */}
           {/* prop={value} */}
-          
-          15deg</p>
+          </p>
         <p id="render-weatherbox">80deg</p>
         <p id="render-weatherbox">30deg</p>
         <p id="render-weatherbox">50deg</p>
