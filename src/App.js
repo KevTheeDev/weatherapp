@@ -37,8 +37,8 @@ export default class App extends React.Component {
 
     this.setState({
       //may not need the .list
-      tempMin: data.list.main.temp_min,
-      tempMax: data.list.main.temp_max,
+      tempMin: data.main.temp_min,
+      tempMax: data.main.temp_max,
       day: data.dt_txt,
     })
   }
