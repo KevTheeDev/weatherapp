@@ -9,7 +9,6 @@ class App extends React.Component {
     super(props);
     this.state = { 
 
-      data: null,
       city: null,
       date: null,
       day1weather: null,
@@ -67,9 +66,9 @@ function Day(){
   
   return ( 
     <div>
-      <h2>Day of the Week Temp {this.state.city.map()}</h2>
+      <h2>Day of the Week Temp {this.state.city.map.temp}</h2>
 
-      {this.state.data.map((recipe, id) => <li key={id}> {recipe.title} </li>)}
+      {/* {this.state.data.map((recipe, id) => <li key={id}> {recipe.title} </li>)} */}
 
     </div>
   )
