@@ -40,9 +40,10 @@ export default class App extends React.Component {
     return (
       <div className="weatherbox">
 
-        <p id="render-weatherbox" onClick={this.getWeather}>
-          {/* .this refers to the getWeather */}
           {/* prop={value} */}
+          {/* .this refers to the getWeather */}
+          {/* using an onclick in the p tag does not make the page refresh, so that's good */}
+        <p id="render-weatherbox" onClick={this.getWeather}>
           </p>
         <p id="render-weatherbox">80deg</p>
         <p id="render-weatherbox">30deg</p>
