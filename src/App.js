@@ -31,7 +31,8 @@ export default class App extends React.Component {
     //.json converts the weadtherdatakey to readable text
     const data = await gotAPI.json()
     
-    //hopefully something comes back from the pai
+    //hopefully something comes back from the api
+    //it does when the onclick is used for get Weather
     console.log( data )
 
     this.setState({
@@ -50,11 +51,11 @@ export default class App extends React.Component {
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-        <p id="render-weatherbox"onClick={this.getWeather}></p>
-        <p id="render-weatherbox">80deg</p>
-        <p id="render-weatherbox">30deg</p>
-        <p id="render-weatherbox">50deg</p>
-        <p id="render-weatherbox">90deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}>75deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}>80deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}>30deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}>50deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}>90deg</p>
 
       </div>
     )
