@@ -30,8 +30,8 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
-        
+      <div className="weatherbox">
+        <p>makign sure the page is working</p>
       </div>
     )
   }

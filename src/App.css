@@ -1,4 +1,6 @@
-#weatherbox {
-  border-color: brown;
+.weatherbox {
+  border-color: #a52a2a;
   width: 30px;
+  height: 200px;
+  background-color: #dfd7d7;
 }
