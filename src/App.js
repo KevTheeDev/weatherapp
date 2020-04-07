@@ -9,6 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = { 
 
+      data: null,
       city: null,
       date: null,
       day1weather: null,
@@ -24,11 +25,7 @@ class App extends React.Component {
 
 
 
-async Day () {
-  const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
-  this.setState({ city: weatherDay.data})
-}
-
+  
   render() { 
     return ( 
       <Router>
@@ -57,6 +54,12 @@ async Day () {
       </Router>
     );
   }
+  async Day () {
+    const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
+    this.setState({ city: weatherDay.data})
+  }
+
+
 }
 
 function Day(){
@@ -64,11 +67,13 @@ function Day(){
   
   return ( 
     <div>
-      <h2>Day of the Week Temp {this.state.data.map}</h2>
+      <h2>Day of the Week Temp {this.state.city.map()}</h2>
+
+      {this.state.data.map((recipe, id) => <li key={id}> {recipe.title} </li>)}
 
     </div>
   )
 }
 
- 
+
 export default App;
