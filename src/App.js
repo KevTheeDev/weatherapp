@@ -10,10 +10,10 @@ export default class App extends React.Component {
     super(props);
     this.state = { 
       
-      cityTemp: [],
-      date: null,
-      day1weather: null,
-      hourWeather: null,
+      day: [],
+      tempMin: [],
+      tempMax: [],
+
       
       day1img: '',
       day2img: '',
@@ -33,6 +33,13 @@ export default class App extends React.Component {
     
     //hopefully something comes back from the pai
     console.log( data )
+
+    this.setState({
+      //may not need the .list
+      tempMin: data.list.main.temp_min,
+      tempMax: data.list.main.temp_max,
+      day: data.dt_txt,
+    })
   }
 
 
