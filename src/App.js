@@ -32,6 +32,11 @@ export default class App extends React.Component {
     return (
       <div className="weatherbox">
         <p id="render-weatherbox"></p>
+        <p id="render-weatherbox"></p>
+        <p id="render-weatherbox"></p>
+        <p id="render-weatherbox"></p>
+        <p id="render-weatherbox"></p>
+
       </div>
     )
   }

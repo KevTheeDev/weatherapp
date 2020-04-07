@@ -3,9 +3,9 @@
 
 }
 
-.render-weatherbox {
+#render-weatherbox {
   border-color: #82484892;
-  width: 600px;
+  width: 100px;
   height: 120px;
   background-color: #d7d0d081;
 }
