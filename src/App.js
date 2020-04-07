@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   //need to call the api_key
-  async getWeather () {
+  getWeather = async () => {
     // use await in the async func to get the e
     const gotAPI = await fetch(weatherDataKey);
 
