@@ -1,41 +1,47 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
 import axios from 'axios';
-
 import './App.css';
+
+const weatherDataKey = 'http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-
-      city: null,
+      
+      cityTemp: [],
       date: null,
       day1weather: null,
       hourWeather: null,
-
+      
       day1img: '',
       day2img: '',
       day3img: '',
       day4img: '',
       day5img: '',
-     }
+    }
   }
 
-  
-  async Day () {
-    const weatherDay = await axios.get('http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba');
-    this.setState({ city: weatherDay.data})
+  //need to call the api_key
+  async getWeather () {
+    // use await in the async func to get the e
+    const gotAPI = await fetch(weatherDataKey);
+
+    //.json converts the weadtherdatakey to readable text
+    const data = await gotAPI.json()
+    console.log( data )
   }
+
 
   render() {
     return (
       <div className="weatherbox">
-        <p id="render-weatherbox"></p>
-        <p id="render-weatherbox"></p>
-        <p id="render-weatherbox"></p>
-        <p id="render-weatherbox"></p>
-        <p id="render-weatherbox"></p>
+        <p id="render-weatherbox">15deg</p>
+        <p id="render-weatherbox">80deg</p>
+        <p id="render-weatherbox">30deg</p>
+        <p id="render-weatherbox">50deg</p>
+        <p id="render-weatherbox">90deg</p>
 
       </div>
     )

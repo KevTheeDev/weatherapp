@@ -6,7 +6,7 @@
 #render-weatherbox {
   display: flex;
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 30%;
   border-color: #82484892;
   width: 100px;
   height: 120px;
