@@ -11,8 +11,8 @@ export default class App extends React.Component {
     this.state = { 
       
       day: [],
-      tempMin: null,
-      tempMax: null,
+      tempMin: '',
+      tempMax: '',
 
       
       day1img: '',
@@ -37,8 +37,8 @@ export default class App extends React.Component {
 
     this.setState({
       //may not need the .list
-      tempMin: data.main.temp_min,
-      tempMax: data.main.temp_max,
+      tempMin: data.list.temp_min,
+      tempMax: data.list.temp_max,
       day: data.dt_txt,
     })
   }
