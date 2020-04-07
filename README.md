@@ -1,4 +1,6 @@
-<img src="/Users/student_m11/Desktop/perS_Java_Codes/MOD2/Wk3/Wk3-d5/weather-app/WeatherApp-wireframe.png"/>
+<img src="./Users/student_m11/Desktop/perS_Java_Codes/MOD2/Wk3/Wk3-d5/weather-app/WeatherApp-wireframe.png"/>
+
+<img id="weather" src={Users/student_m11/Desktop/perS_Java_Codes/MOD2/Wk3/Wk3-d5/weather-app/WeatherApp-wireframe.png}  alt="logo"/>
 
 
 
