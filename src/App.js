@@ -12,7 +12,7 @@ export default class App extends React.Component {
       
       day: [],
       tempMin: null,
-      tempMax: undefined,
+      tempMax: null,
 
       
       day1img: '',
@@ -50,8 +50,7 @@ export default class App extends React.Component {
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-        <p id="render-weatherbox"onClick={this.state.temp_max}>
-        onClick={this.state.temp_max}</p>
+        <p id="render-weatherbox"onClick={this.getWeather}></p>
         <p id="render-weatherbox">80deg</p>
         <p id="render-weatherbox">30deg</p>
         <p id="render-weatherbox">50deg</p>
