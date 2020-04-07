@@ -1,7 +1,8 @@
 .weatherbox {
   margin-top: 1in;
-  border-color: #a52a2a;
-  width: 80px;
-  height: 80px;
-  background-color: #dfd7d7;
+
+}
+
+.render-weatherbox {
+
 }
