@@ -31,7 +31,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="weatherbox">
-        <p>makign sure the page is working</p>
+        <p></p>
       </div>
     )
   }

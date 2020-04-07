@@ -1,6 +1,7 @@
 .weatherbox {
+  margin-top: 1in;
   border-color: #a52a2a;
-  width: 30px;
-  height: 200px;
+  width: 80px;
+  height: 80px;
   background-color: #dfd7d7;
 }
