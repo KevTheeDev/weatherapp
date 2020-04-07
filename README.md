@@ -1,3 +1,8 @@
+<img src="/Users/student_m11/Desktop/perS_Java_Codes/MOD2/Wk3/Wk3-d5/weather-app/WeatherApp-wireframe.png"/>
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
