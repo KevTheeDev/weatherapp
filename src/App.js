@@ -36,9 +36,9 @@ export default class App extends React.Component {
     const data = await gotAPI.json()
     console.log( data )
     this.setState({
-      tempMin: data.list[0].main.temp,
-      tempMax: data.list.temp_max,
-      day: data.dt_txt,
+      tempMin: data.list[0].main.temp_min,
+      tempMax: data.list[0].main.temp_max,
+      day: data.list[0].dt_txt,
     })
   }
 
@@ -50,11 +50,11 @@ export default class App extends React.Component {
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-    <p id="render-weatherbox" onClick={this.getWeather}>75deg {this.setState}</p>
-        <p id="render-weatherbox" onClick={this.getWeather}>80deg</p>
-        <p id="render-weatherbox" onClick={this.getWeather}>30deg</p>
-        <p id="render-weatherbox" onClick={this.getWeather}>50deg</p>
-        <p id="render-weatherbox" onClick={this.getWeather}>90deg</p>
+        <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <p id="render-weatherboxD2" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <p id="render-weatherboxD3" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <p id="render-weatherboxD4" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <p id="render-weatherboxD5" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
 
       </div>
     )
