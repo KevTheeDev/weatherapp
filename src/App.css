@@ -11,4 +11,46 @@
   width: 100px;
   height: 120px;
   background-color: #d7d0d081;
+  font-size: small;
+}
+
+#render-weatherboxD2{
+  display: flex;
+  display: grid;
+  grid-template-columns: 30%;
+  border-color: #82484892;
+  width: 100px;
+  height: 120px;
+  background-color: #d7d0d081;
+  font-size: small;
+}
+#render-weatherboxD3{
+  display: flex;
+  display: grid;
+  grid-template-columns: 30%;
+  border-color: #82484892;
+  width: 100px;
+  height: 120px;
+  background-color: #d7d0d081;
+  font-size: small;
+}
+#render-weatherboxD4{
+  display: flex;
+  display: grid;
+  grid-template-columns: 30%;
+  border-color: #82484892;
+  width: 100px;
+  height: 120px;
+  background-color: #d7d0d081;
+  font-size: small;
+}
+#render-weatherboxD5{
+  display: flex;
+  display: grid;
+  grid-template-columns: 30%;
+  border-color: #82484892;
+  width: 100px;
+  height: 120px;
+  background-color: #d7d0d081;
+  font-size: small;
 }
