@@ -13,7 +13,6 @@ export default class App extends React.Component {
       day: [],
       tempMin: '',
       tempMax: '',
-
       
       day1img: '',
       day2img: '',
@@ -26,18 +25,18 @@ export default class App extends React.Component {
   //need to call the api_key
   getWeather = async () => {
     // use await in the async func to get the e
-    const gotAPI = await fetch(weatherDataKey);
-
-    //.json converts the weadtherdatakey to readable text
-    const data = await gotAPI.json()
+    // .json converts the weadtherdatakey to readable text
+    // with await gotAPI something comes back from the api
+    // data is the main object with await gotAPI.json
+      // so we start with .data when we want want to get anything from the object
+    // it does when the onclick is used for get Weather
+    // .list is needed for the this.Setstate
     
-    //hopefully something comes back from the api
-    //it does when the onclick is used for get Weather
+    const gotAPI = await fetch(weatherDataKey);
+    const data = await gotAPI.json()
     console.log( data )
-
     this.setState({
-      //may not need the .list
-      tempMin: data.list.temp_min,
+      tempMin: data.list[0].main.temp,
       tempMax: data.list.temp_max,
       day: data.dt_txt,
     })
@@ -51,7 +50,7 @@ export default class App extends React.Component {
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-        <p id="render-weatherbox" onClick={this.getWeather}>75deg</p>
+    <p id="render-weatherbox" onClick={this.getWeather}>75deg {this.setState}</p>
         <p id="render-weatherbox" onClick={this.getWeather}>80deg</p>
         <p id="render-weatherbox" onClick={this.getWeather}>30deg</p>
         <p id="render-weatherbox" onClick={this.getWeather}>50deg</p>
