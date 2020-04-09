@@ -30,6 +30,7 @@ export default class App extends React.Component {
     // data is the main object with await gotAPI.json
       // so we start with .data when we want want to get anything from the object
     // it does when the onclick is used for get Weather
+    // try {}catch(error) is if it fails, we'll know about it
     // .list is needed for the this.Setstate
    try { 
     const gotAPI = await fetch(weatherDataKey);
