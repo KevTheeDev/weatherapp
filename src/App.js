@@ -31,16 +31,23 @@ export default class App extends React.Component {
       // so we start with .data when we want want to get anything from the object
     // it does when the onclick is used for get Weather
     // .list is needed for the this.Setstate
-    
+   try { 
     const gotAPI = await fetch(weatherDataKey);
     const data = await gotAPI.json()
     console.log( data )
     this.setState({
       tempMin: data.list[0].main.temp_min,
+      //data.list in a foreach loop to iterate throuhg each one
       tempMax: data.list[0].main.temp_max,
+      
+      //data.list in a foreach loop to iterate throuhg each one
       day: data.list[0].dt_txt,
     })
+  } catch(error) {
+    console.error(error)
   }
+}
+
 
 
   render() {
@@ -57,6 +64,7 @@ export default class App extends React.Component {
         <p id="render-weatherboxD5" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
 
       </div>
+      
     )
   }
 }

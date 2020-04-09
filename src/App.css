@@ -24,6 +24,7 @@
   background-color: #d7d0d081;
   font-size: 6pt;
 }
+
 #render-weatherboxD3{
   display: flex;
   display: grid;
@@ -34,6 +35,7 @@
   background-color: #d7d0d081;
   font-size: 6pt;
 }
+
 #render-weatherboxD4{
   display: flex;
   display: grid;
@@ -44,6 +46,7 @@
   background-color: #d7d0d081;
   font-size: 6pt;
 }
+
 #render-weatherboxD5{
   display: flex;
   display: grid;
