@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
+import Weather from './component/Weather';
+
 
 const weatherDataKey = 'http://api.openweathermap.org/data/2.5/forecast?q=Dallas,us&APPID=a3f2467086e2bd2e13ffdad5355858ba';
 
@@ -49,6 +51,17 @@ export default class App extends React.Component {
   }
 }
 
+//insert nullcheck
+nullcheck(){
+  if (this.state.weather === null){
+    return <h2> no information </h2>
+  } else {
+    (this.state.weather.list.map(listItem => console.log(listItem))){
+
+    }
+  }
+}
+
 
 
   render() {
@@ -58,7 +71,13 @@ export default class App extends React.Component {
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-        <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin.map(listItem =>)} {this.state.tempMax} {this.state.day}</p>
+        
+        {/* begin code along */}
+        {/*         <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin.map(listItem =>)} {this.state.tempMax} {this.state.day}</p>
+ */}
+
+
         <p id="render-weatherboxD2" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
         <p id="render-weatherboxD3" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
         <p id="render-weatherboxD4" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
