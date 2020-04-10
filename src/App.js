@@ -24,6 +24,11 @@ export default class App extends React.Component {
     }
   }
 
+  // code along 
+//   this.state = {
+//     weather: null,
+// }
+
   //need to call the api_key
   getWeather = async () => {
     // use await in the async func to get the e
@@ -35,7 +40,7 @@ export default class App extends React.Component {
     // try {}catch(error) is if it fails, we'll know about it
     // .list is needed for the this.Setstate
    try { 
-    const gotAPI = await fetch(weatherDataKey);
+    const gotAPI = await axios.get(weatherDataKey);
     const data = await gotAPI.json()
     console.log( data )
     this.setState({
@@ -52,15 +57,14 @@ export default class App extends React.Component {
 }
 
 //insert nullcheck
-nullcheck(){
-  if (this.state.weather === null){
-    return <h2> no information </h2>
-  } else {
-    (this.state.weather.list.map(listItem => console.log(listItem))){
-
-    }
-  }
-}
+// nullcheck() {
+//     if(this.state.weather === null) {
+//       return <h2>no information</h2>
+//     } else {
+//       this.state.weather.list.map(listItem => <Weather />);
+//     }
+// }
+// }
 
 
 
@@ -71,7 +75,8 @@ nullcheck(){
           {/* prop={value} */}
           {/* .this refers to the getWeather */}
           {/* using an onclick in the p tag does not make the page refresh, so that's good */}
-        <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin.map(listItem =>)} {this.state.tempMax} {this.state.day}</p>
+  
+        <button id="render-weatherbox" onClick={this.getWeather}> <ul>{this.state.tempMin} {this.state.tempMax} {this.state.day}</ul></button>
         
         {/* begin code along */}
         {/*         <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin.map(listItem =>)} {this.state.tempMax} {this.state.day}</p>
