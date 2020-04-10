@@ -81,12 +81,17 @@ export default class App extends React.Component {
         {/* begin code along */}
         {/*         <p id="render-weatherbox" onClick={this.getWeather}> {this.state.tempMin.map(listItem =>)} {this.state.tempMax} {this.state.day}</p>
  */}
+        <div id="render-weatherboxD2" onClick={this.getWeather}><p>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p></div> 
+        
 
+        <div id="render-weatherboxD3" onClick={this.getWeather}><p>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p></div>
+        
 
-        <p id="render-weatherboxD2" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
-        <p id="render-weatherboxD3" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
-        <p id="render-weatherboxD4" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
-        <p id="render-weatherboxD5" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p>
+        <div id="render-weatherboxD4" onClick={this.getWeather}><p>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p></div>
+        
+
+        <div id="render-weatherboxD2" onClick={this.getWeather}><p id="render-weatherboxD5" onClick={this.getWeather}>{this.state.tempMin} {this.state.tempMax} {this.state.day}</p></div>
+        
 
       </div>
       
